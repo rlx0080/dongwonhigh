@@ -8,7 +8,7 @@
 }
 
 html {
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
     font-family: monospace;
     font-size: 14px;
@@ -16,7 +16,7 @@ html {
 }
 
 body {
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -32,7 +32,6 @@ body {
     justify-content: center;
     max-width: 680px;
     width: 100%;
-    height: 100%;
     overflow-y: scroll;
 }
 .container::-webkit-scrollbar{
@@ -100,7 +99,9 @@ canvas {
     padding: 3em 0 0 0;
 }
 .info-category {
-    padding-right: 1rem;
+    /* padding-right: 1rem; */
+    width: 100%;
+    height: 14px;
 }
 
 .open_btn {
@@ -113,6 +114,7 @@ canvas {
 
 .menu-controls {
     display: block;
+    height: 14px;
 }
 
 .bt-dashed {
@@ -147,4 +149,9 @@ canvas {
 #qrcode{
     width: 100px;
     height: 100px;
+}
+p{
+    width: 100%;
+    color: white;
+    padding-top: 3rem;
 }

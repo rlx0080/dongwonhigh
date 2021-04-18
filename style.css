@@ -1,0 +1,157 @@
+* {
+    user-select: none;
+    -ms-user-select: none;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+    /* height: 100%; */
+    width: 100%;
+    font-family: monospace;
+    font-size: 14px;
+    scrollbar-width: none;
+}
+
+body {
+    /* height: 100%; */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: black;
+    scrollbar-width: none;
+    position: fixed;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 680px;
+    width: 100%;
+    overflow-y: scroll;
+}
+.container::-webkit-scrollbar{
+    display: none;
+}
+
+canvas {
+    width: 50%;
+}
+
+@media (max-width: 680px) {
+    canvas {
+        width: 100%;
+        display: block;
+    }
+
+    .info-container {
+        overflow-x: hidden;
+        padding: 0 calc((100vw - 340px) / 2) !important;
+    }
+}
+
+@media (max-width: 340px) {
+    .info-container {
+        width: 100% !important;
+        padding: 0 0 !important;
+    }
+}
+
+.menu-box {
+    height: 0px;
+    padding: 0.3rem 0;
+}
+
+.nav {
+    opacity: 0;
+    visibility: hidden;
+    color: white;
+    width: 100%;
+}
+
+.description-box {
+    height: calc(100% - 2rem - 2px);
+    padding: 0 1rem;
+    line-height: 1.2;
+    background-color: rgb(0, 0, 0);
+    border-top: 1px dotted white;
+    border-bottom: 1px dotted white;
+}
+
+.info-container {
+    width: 340px;
+    padding: 0 170px;
+    float: left;
+}
+
+.info {
+    display: flex;
+    padding: 2rem 0 0 0;
+}
+.info-sm{
+    padding: 1rem 0 0 0 !important;
+}
+.info-title{
+    padding: 3em 0 0 0;
+}
+.info-category {
+    /* padding-right: 1rem; */
+    width: 100%;
+    height: 14px;
+}
+
+.open_btn {
+    color: white;
+}
+
+.close_btn {
+    color: white;
+}
+
+.menu-controls {
+    display: block;
+    height: 14px;
+}
+
+.bt-dashed {
+    border-bottom: 2px dashed white;
+}
+
+.open {
+    opacity: 1;
+    visibility: visible;
+    animation: myAnimation 8s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.close {
+    animation: myCloseAnimation 8s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none;
+}
+
+.qrcode-container{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+#qrcode{
+    width: 100px;
+    height: 100px;
+}
+p{
+    width: 100%;
+    color: white;
+    padding-top: 3rem;
+}

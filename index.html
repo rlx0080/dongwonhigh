@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dots make story</title>
+    <title>Base Conversion</title>
     <link rel="stylesheet" href="style.css">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="viewport"
@@ -14,56 +14,30 @@
 <body>
     <div class="container">
         <div class="menu-controls">
-            <div class="open_btn"><u>Work Description</u></div>
-            <div class="close_btn hide"><u>Close</u></div>
+            <div class="open_btn"><u>Try your self!</u></div>
+            <!-- <div class="close_btn hide"><u>Close</u></div> -->
         </div>
-        <div class="menu-box">
-            <div id="test" class="nav">
-                <div class="info-container">
-                    <div class="description-box">
-                        <div class="info info-title">
-                            <h3>
-                                지루한 패턴의 반복은 스토리를 만든다<br>Boring patterns make story
-                            </h3>
-                        </div>
-                        <div class="info">
-                            <p class="info-category">KO</p>
-                            <p class="info-txt">
-                                단순하고 반복적인 패턴은 지루하다. 그러나 단순하고 반복적인 패턴이 충분한 개수 이상 모이게 되면, 이전보다 복잡하고 새로운 패턴이 만들어진다. 이러한 사실을
-                                8개의 원 안을 직선 운동하는 점들을 통해 표현하고자 했다.<br>원 안을 직선 운동하는 점의 개수가 증가할수록, 점들은 단순한 직선 운동 이상의 스토리를
-                                만들어낸다. 그리고 마침내, 원 안에 8개의 점이 모였을 때, 점들은 원 안에 또 다른 원이 회전운동 하는 듯한 패턴을 만든다.
-                            </p>
-                        </div>
-                        <div class="info">
-                            <p class="info-category">EN</p>
-                            <p class="info-txt">Simple and repetitive patterns are boring. More complex and new
-                                patterns, however are created, if there are enough simple and repetitive patterns. The
-                                dots that move linearly through the eight circles represent this fact.<br>As the number
-                                of dots in a circle increases, the dots create a story that is more than just linear
-                                movements. Finally, when eight dots are gathered in one circle, the dots create a
-                                pattern in which another circle is rotating.
-                            </p>
-                        </div>
-                        <div class="info bt-dashed"></div>
-                        <div class="info qrcode-container">
-                            <div id="qrcode"></div>
-                        </div>
-                        <div class="info info-sm qrcode-container">
-                            <h3>TODAY'S WORD</h3>
-                        </div>
-                        <div class="info info-sm"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <canvas class="box" id="box1"></canvas>
-        <canvas class="box" id="box2"></canvas>
-        <canvas class="box" id="box3"></canvas>
-        <canvas class="box" id="box4"></canvas>
-        <canvas class="box" id="box5"></canvas>
-        <canvas class="box" id="box6"></canvas>
-        <canvas class="box" id="box7"></canvas>
-        <canvas class="box" id="box8"></canvas>
+
+        <p style="LINE-HEIGHT: 30px"><label style="MARGIN: 5px 30px" for="dec">DEC</label>
+            <input
+                onkeyup="hex.value=parseInt(this.value).toString(16);bin.value=parseInt(this.value).toString(2);oct.value=parseInt(this.value).toString(8);"
+                id="dec" name="dec">
+        </p>
+        <p style="LINE-HEIGHT: 30px"><label style="MARGIN: 5px 30px" for="hex">HEX</label>
+            <input
+                onkeyup="dec.value=parseInt(this.value, 16);bin.value=parseInt(this.value, 16).toString(2);oct.value=parseInt(this.value, 16).toString(8);"
+                id="hex" name="hex">
+        </p>
+        <p style="LINE-HEIGHT: 30px"><label style="MARGIN: 5px 30px" for="bin">BIN</label>
+            <input
+                onkeyup="dec.value=parseInt(this.value, 2);hex.value=parseInt(this.value, 2).toString(16);oct.value=parseInt(this.value, 2).toString(8);"
+                id="bin" name="bin">
+        </p>
+        <p style="LINE-HEIGHT: 30px"><label style="MARGIN: 5px 30px" for="oct">OCT</label>
+            <input
+                onkeyup="dec.value=parseInt(this.value, 8);hex.value=parseInt(this.value, 8).toString(16);bin.value=parseInt(this.value, 8).toString(2);"
+                id="oct" name="oct">
+        </p>
 
     </div>
 
